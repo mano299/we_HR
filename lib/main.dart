@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:we_hr/views/dashboard_view.dart';
 
 void main() {
   runApp(const WeHR());
@@ -10,7 +11,9 @@ class WeHR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'WeHR',
+      home: DashboardView(),
     );
   }
 }
