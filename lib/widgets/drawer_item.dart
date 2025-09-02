@@ -3,19 +3,24 @@ import 'package:we_hr/utils/app_colors.dart';
 import 'package:we_hr/utils/app_styles.dart';
 
 class DrawerItem extends StatelessWidget {
-  const DrawerItem({super.key});
-  
+  const DrawerItem({
+    super.key,
+    required this.icon,
+    required this.title,
+  });
+  final IconData icon;
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Icon(
-          Icons.grid_view_rounded,
+          icon,
           color: AppColors.kSecondaryColor,
         ),
         SizedBox(width: 24),
         Text(
-          'title',
+          title,
           style: AppStyles.styleMeduim16(context),
         ),
       ],

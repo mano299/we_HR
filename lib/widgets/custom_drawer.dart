@@ -32,7 +32,6 @@ class CustomDrawer extends StatelessWidget {
               style: AppStyles.styleMeduim12(context),
             ),
             SizedBox(height: 10),
-            DrawerItem(),
           ],
         ),
       ),
