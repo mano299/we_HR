@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:we_hr/utils/app_styles.dart';
+import 'package:we_hr/widgets/drawer_item.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -31,7 +32,7 @@ class CustomDrawer extends StatelessWidget {
               style: AppStyles.styleMeduim12(context),
             ),
             SizedBox(height: 10),
-            
+            DrawerItem(),
           ],
         ),
       ),

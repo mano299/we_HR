@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:we_hr/utils/app_colors.dart';
 
 abstract class AppStyles {
   static TextStyle styleRegular16(context) {
@@ -21,7 +22,7 @@ abstract class AppStyles {
 
   static TextStyle styleMeduim16(context) {
     return TextStyle(
-      color: Color(0xffFF5151),
+      color: AppColors.kSecondaryColor,
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w500,
