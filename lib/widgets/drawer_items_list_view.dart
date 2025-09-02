@@ -28,19 +28,17 @@ class DrawerItemsListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16.0),
-            child: DrawerItem(
-              icon: items[index].icon,
-              title: items[index].title,
-            ),
-          );
-        },
-      ),
+    return SliverList.builder(
+      itemCount: items.length,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16.0),
+          child: DrawerItem(
+            icon: items[index].icon,
+            title: items[index].title,
+          ),
+        );
+      },
     );
   }
 }
