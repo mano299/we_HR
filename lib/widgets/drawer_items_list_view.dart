@@ -58,7 +58,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
                 borderRadius: BorderRadius.circular(12),
               ),
               padding:
-                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 12.0),
+                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 12),
               child: DrawerItem(
                 isActive: isSelected == index,
                 icon: items[index].icon,
