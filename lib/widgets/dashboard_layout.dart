@@ -8,7 +8,13 @@ class DashboardLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: CustomDrawer(),
+      body: Row(
+        children: [
+          Expanded(child: CustomDrawer()),
+          Expanded(child: SizedBox()),
+          Expanded(child: SizedBox()),
+        ],
+      ),
     );
   }
 }

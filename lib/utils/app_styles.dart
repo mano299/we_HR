@@ -39,7 +39,7 @@ abstract class AppStyles {
 
   static TextStyle styleMeduim12(context) {
     return TextStyle(
-      color: Color(0xff303030),
+      color: Color(0xff686868),
       fontSize: getResponsiveFontSize(context, fontSize: 12),
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w500,

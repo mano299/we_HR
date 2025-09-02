@@ -6,23 +6,33 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      shape: BeveledRectangleBorder(
-        borderRadius: BorderRadius.circular(0),
+    return Container(
+      decoration: BoxDecoration(
+        color: Color(0xfffafafa),
       ),
-      backgroundColor: Color(0xfffafafa),
-      child: Column(
-        children: [
-          DrawerHeader(
-            child: Align(
-              alignment: Alignment.topCenter,
-              child: Text(
-                'WeHR',
-                style: AppStyles.styleSemiBold36(context),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 30.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'WeHR',
+                  style: AppStyles.styleSemiBold36(context),
+                ),
               ),
             ),
-          ),
-        ],
+            SizedBox(height: 39),
+            Text(
+              'MAIN MENU',
+              style: AppStyles.styleMeduim12(context),
+            ),
+            
+          ],
+        ),
       ),
     );
   }
