@@ -55,6 +55,15 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleSemiBold36(context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: getResponsiveFontSize(context, fontSize: 36),
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w600,
+    );
+  }
+
   static TextStyle styleRegular10(context) {
     return TextStyle(
       color: Color(0xff686868),

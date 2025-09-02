@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:we_hr/widgets/custom_drawer.dart';
 
 class DashboardLayout extends StatelessWidget {
   const DashboardLayout({super.key});
@@ -6,7 +7,8 @@ class DashboardLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(),
+      backgroundColor: Colors.white,
+      body: CustomDrawer(),
     );
   }
 }
