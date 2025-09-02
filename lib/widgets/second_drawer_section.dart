@@ -20,6 +20,7 @@ class SecondDrawerSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(vertical: 16.0),
           child: DrawerItem(
+            isActive: false,
             icon: Icons.support_agent,
             title: 'Support',
           ),
@@ -27,6 +28,7 @@ class SecondDrawerSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(vertical: 16.0),
           child: DrawerItem(
+            isActive: false,
             icon: Icons.settings,
             title: 'Settings',
           ),

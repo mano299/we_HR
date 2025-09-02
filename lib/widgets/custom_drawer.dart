@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:we_hr/utils/app_styles.dart';
-import 'package:we_hr/widgets/drawer_item.dart';
 import 'package:we_hr/widgets/drawer_items_list_view.dart';
 import 'package:we_hr/widgets/second_drawer_section.dart';
 
