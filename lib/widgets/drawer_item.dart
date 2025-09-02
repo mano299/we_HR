@@ -21,7 +21,7 @@ class DrawerItem extends StatelessWidget {
         SizedBox(width: 24),
         Text(
           title,
-          style: AppStyles.styleMeduim16(context),
+          style: AppStyles.styleRegular16(context),
         ),
       ],
     );
