@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:we_hr/models/drawer_item_model.dart';
+import 'package:we_hr/utils/app_colors.dart';
 import 'package:we_hr/widgets/drawer_item.dart';
 
 class DrawerItemsListView extends StatefulWidget {
@@ -39,6 +40,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
     return SliverList.builder(
       itemCount: items.length,
       itemBuilder: (context, index) {
+        final bool active = isSelected == index;
         return GestureDetector(
           onTap: () {
             if (isSelected != index) {
@@ -47,11 +49,21 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
             }
           },
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16.0),
-            child: DrawerItem(
-              isActive: isSelected == index,
-              icon: items[index].icon,
-              title: items[index].title,
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+              decoration: BoxDecoration(
+                color: active ? AppColors.kKohlyColor : Colors.transparent,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 12.0),
+              child: DrawerItem(
+                isActive: isSelected == index,
+                icon: items[index].icon,
+                title: items[index].title,
+              ),
             ),
           ),
         );
