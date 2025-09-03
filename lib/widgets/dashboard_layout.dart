@@ -11,8 +11,8 @@ class DashboardLayout extends StatelessWidget {
       body: Row(
         children: [
           Expanded(child: CustomDrawer()),
-          Expanded(child: SizedBox()),
-          Expanded(child: SizedBox()),
+          SizedBox(width: 50),
+          Expanded(flex: 5, child: SizedBox()),
         ],
       ),
     );
