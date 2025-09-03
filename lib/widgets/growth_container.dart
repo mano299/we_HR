@@ -10,6 +10,7 @@ class GrowthContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
@@ -19,8 +20,10 @@ class GrowthContainer extends StatelessWidget {
         ),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 growthContainerModel.title,
@@ -37,6 +40,7 @@ class GrowthContainer extends StatelessWidget {
                 growthContainerModel.men,
                 style: AppStyles.styleMeduim12(context),
               ),
+              SizedBox(height: 4),
               Text(
                 growthContainerModel.women,
                 style: AppStyles.styleMeduim12(context),
