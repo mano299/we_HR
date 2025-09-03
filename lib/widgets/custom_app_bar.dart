@@ -23,7 +23,7 @@ class CustomAppbar extends StatelessWidget {
           SizedBox(width: 30),
           CircleAvatar(
             backgroundColor: Colors.black,
-            maxRadius: 20,
+            maxRadius: 24,
           ),
           SizedBox(width: 12),
           Text(

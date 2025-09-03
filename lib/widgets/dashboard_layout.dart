@@ -24,7 +24,7 @@ class DashboardLayout extends StatelessWidget {
                   child: CustomAppbar(),
                 ),
                 SizedBox(height: 22),
-                Divider(),
+                Divider(color: Color(0xffF1F1F1)),
                 SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0),
