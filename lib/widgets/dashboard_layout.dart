@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:we_hr/widgets/custom_app_bar.dart';
 import 'package:we_hr/widgets/custom_drawer.dart';
+import 'package:we_hr/widgets/custom_text_field.dart';
 
 class DashboardLayout extends StatelessWidget {
   const DashboardLayout({super.key});
@@ -12,7 +14,17 @@ class DashboardLayout extends StatelessWidget {
         children: [
           Expanded(child: CustomDrawer()),
           SizedBox(width: 50),
-          Expanded(flex: 5, child: SizedBox()),
+          Expanded(
+            flex: 3,
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 22.0),
+                  child: CustomAppbar(),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
