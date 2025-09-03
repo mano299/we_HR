@@ -35,7 +35,8 @@ class DashboardLayout extends StatelessWidget {
                         AppStyles.styleMeduim36(context).copyWith(fontSize: 24),
                   ),
                 ),
-                OverallContainers()
+                OverallContainers(),
+                SizedBox(height: 20),
               ],
             ),
           ),
