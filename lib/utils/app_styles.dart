@@ -95,9 +95,9 @@ double getScaleFactor(context) {
   // double width = physicalWidth / devicePixelRatio;
 
   double width = MediaQuery.sizeOf(context).width;
-  if (width < 800) {
+  if (width < 900) {
     return width / 550;
-  } else if (width < 1350) {
+  } else if (width < 1200) {
     return width / 1000;
   } else {
     return width / 1920;

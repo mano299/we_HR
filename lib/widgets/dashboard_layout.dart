@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:we_hr/utils/app_styles.dart';
+import 'package:we_hr/widgets/announcement.dart';
 import 'package:we_hr/widgets/custom_app_bar.dart';
 import 'package:we_hr/widgets/custom_drawer.dart';
 import 'package:we_hr/widgets/growth_items.dart';
@@ -39,6 +40,7 @@ class DashboardLayout extends StatelessWidget {
                 OverallContainers(),
                 SizedBox(height: 20),
                 GrowthItems(),
+                Announcement(),
               ],
             ),
           ),
