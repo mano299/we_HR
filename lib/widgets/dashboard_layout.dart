@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:we_hr/utils/app_styles.dart';
 import 'package:we_hr/widgets/custom_app_bar.dart';
 import 'package:we_hr/widgets/custom_drawer.dart';
+import 'package:we_hr/widgets/overall_containers.dart';
 
 class DashboardLayout extends StatelessWidget {
   const DashboardLayout({super.key});
@@ -34,6 +35,7 @@ class DashboardLayout extends StatelessWidget {
                         AppStyles.styleMeduim36(context).copyWith(fontSize: 24),
                   ),
                 ),
+                OverallContainers()
               ],
             ),
           ),
