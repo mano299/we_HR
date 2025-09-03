@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:we_hr/utils/app_colors.dart';
 import 'package:we_hr/utils/app_styles.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -9,19 +10,24 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        border: OutlineInputBorder(
+        border: OutlineInputBorder(),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.kRedColor),
+        ),
+        enabled: true,
+        enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Color(0xffB2B2B2),
+            color: Color(0xffE0E0E0),
           ),
         ),
         filled: true,
         fillColor: Color(0xffFAFAFA),
         hintText: 'Search',
-        hintStyle: AppStyles.styleRegular16(context),
+        hintStyle: AppStyles.styleRegular16(context)
+            .copyWith(color: Color(0xffB3B3B3)),
         suffixIcon: SvgPicture.asset(
           'assets/images/search_icon.svg',
-          width: 24,
-          height: 24,
+          fit: BoxFit.contain,
         ),
       ),
     );
