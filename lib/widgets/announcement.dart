@@ -9,6 +9,10 @@ class Announcement extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(top: 16, right: 20, left: 20),
       decoration: BoxDecoration(
+        border: Border.all(
+          color: Color(0xffE0E0E0),
+          width: 1,
+        ),
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
@@ -20,4 +24,3 @@ class Announcement extends StatelessWidget {
     );
   }
 }
-

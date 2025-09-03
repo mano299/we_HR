@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:we_hr/utils/app_colors.dart';
 import 'package:we_hr/utils/app_styles.dart';
 
-
 class AnnouncementHeader extends StatelessWidget {
   const AnnouncementHeader({super.key});
 
@@ -13,7 +12,7 @@ class AnnouncementHeader extends StatelessWidget {
         Text(
           'Announcement',
           style: AppStyles.styleMeduim18(context)
-              .copyWith(color: AppColors.kKohlyColor),
+              .copyWith(color: AppColors.kKohlyColor, fontSize: 20),
         ),
         Spacer(),
         Container(

@@ -40,6 +40,7 @@ class DashboardLayout extends StatelessWidget {
                 OverallContainers(),
                 SizedBox(height: 20),
                 GrowthItems(),
+                SizedBox(height: 20),
                 Announcement(),
               ],
             ),
