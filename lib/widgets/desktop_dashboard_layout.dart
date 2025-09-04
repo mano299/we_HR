@@ -6,7 +6,6 @@ import 'package:we_hr/widgets/custom_app_bar.dart';
 import 'package:we_hr/widgets/custom_drawer.dart';
 import 'package:we_hr/widgets/growth_items.dart';
 import 'package:we_hr/widgets/overall_containers.dart';
-import 'package:we_hr/widgets/schedule.dart';
 
 class DesktopDashboardLayout extends StatelessWidget {
   const DesktopDashboardLayout({super.key});
@@ -61,13 +60,7 @@ class DesktopDashboardLayout extends StatelessWidget {
                         flex: 2,
                         child: Padding(
                           padding: const EdgeInsets.only(right: 50.0),
-                          child: Column(
-                            children: [
-                              ActivitySection(),
-                              SizedBox(height: 30),
-                              Schedule(),
-                            ],
-                          ),
+                          child: ActivitySection(),
                         ),
                       ),
                     ],
