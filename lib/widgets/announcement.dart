@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:we_hr/widgets/announcementItemsListView.dart';
+import 'package:we_hr/widgets/announcement_body.dart';
+import 'package:we_hr/widgets/announcement_items_list_view.dart';
 import 'package:we_hr/widgets/announcement_header.dart';
-import 'package:we_hr/widgets/announcement_item.dart';
 
 class Announcement extends StatelessWidget {
   const Announcement({super.key});
@@ -9,7 +9,6 @@ class Announcement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 16, right: 20, left: 20),
       decoration: BoxDecoration(
         border: Border.all(
           color: Color(0xffE0E0E0),
@@ -20,9 +19,13 @@ class Announcement extends StatelessWidget {
       ),
       child: Column(
         children: [
-          AnnouncementHeader(),
-          SizedBox(height: 16),
-          Expanded(child: AnnouncementItemsListView())
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(top: 16, right: 20, left: 20),
+              child: AnnouncementBody(),
+            ),
+          ),
+          Divider(color: Color(0xffE0E0E0)),
         ],
       ),
     );

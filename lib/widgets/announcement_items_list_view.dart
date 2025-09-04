@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:we_hr/widgets/announcement_item.dart';
 
-
 class AnnouncementItemsListView extends StatelessWidget {
-  const AnnouncementItemsListView({
-    super.key,
-  });
+  const AnnouncementItemsListView({super.key});
 
   @override
   Widget build(BuildContext context) {
