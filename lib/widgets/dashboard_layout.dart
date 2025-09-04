@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:we_hr/utils/app_styles.dart';
+import 'package:we_hr/widgets/activity_section.dart';
 import 'package:we_hr/widgets/announcement.dart';
 import 'package:we_hr/widgets/custom_app_bar.dart';
 import 'package:we_hr/widgets/custom_drawer.dart';
@@ -20,29 +21,47 @@ class DashboardLayout extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 22.0),
                   child: CustomAppbar(),
                 ),
-                SizedBox(height: 22),
                 Divider(color: Color(0xffF1F1F1)),
-                SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0),
-                  child: Text(
-                    'Dashboard',
-                    style:
-                        AppStyles.styleMeduim36(context).copyWith(fontSize: 24),
+                Expanded(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        flex: 3,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 10),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 10.0),
+                              child: Text(
+                                'Dashboard',
+                                style: AppStyles.styleMeduim36(context)
+                                    .copyWith(fontSize: 24),
+                              ),
+                            ),
+                            OverallContainers(),
+                            SizedBox(height: 20),
+                            GrowthItems(),
+                            SizedBox(height: 20),
+                            Expanded(child: Announcement()),
+                            SizedBox(height: 34),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: ActivitySection(),
+                      ),
+                    ],
                   ),
                 ),
-                OverallContainers(),
-                SizedBox(height: 20),
-                GrowthItems(),
-                SizedBox(height: 20),
-                Expanded(child: Announcement()),
-                SizedBox(height: 34),
               ],
             ),
           ),
