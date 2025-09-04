@@ -39,7 +39,7 @@ class RecentlyActivityBody extends StatelessWidget {
               style: ButtonStyle(
                 shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6),
+                    borderRadius: BorderRadius.circular(4),
                   ),
                 ),
                 backgroundColor: WidgetStateProperty.all(AppColors.kRedColor),

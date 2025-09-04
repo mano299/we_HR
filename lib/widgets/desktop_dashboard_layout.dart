@@ -6,9 +6,10 @@ import 'package:we_hr/widgets/custom_app_bar.dart';
 import 'package:we_hr/widgets/custom_drawer.dart';
 import 'package:we_hr/widgets/growth_items.dart';
 import 'package:we_hr/widgets/overall_containers.dart';
+import 'package:we_hr/widgets/schedule.dart';
 
-class DashboardLayout extends StatelessWidget {
-  const DashboardLayout({super.key});
+class DesktopDashboardLayout extends StatelessWidget {
+  const DesktopDashboardLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +17,10 @@ class DashboardLayout extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Row(
         children: [
-          Expanded(child: CustomDrawer()),
+          Expanded(flex: 1, child: CustomDrawer()),
           SizedBox(width: 50),
           Expanded(
-            flex: 3,
+            flex: 4,
             child: Column(
               children: [
                 Padding(
@@ -55,9 +56,19 @@ class DashboardLayout extends StatelessWidget {
                           ],
                         ),
                       ),
+                      SizedBox(width: 30),
                       Expanded(
                         flex: 2,
-                        child: ActivitySection(),
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 50.0),
+                          child: Column(
+                            children: [
+                              ActivitySection(),
+                              SizedBox(height: 30),
+                              Schedule(),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),
