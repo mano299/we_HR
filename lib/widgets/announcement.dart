@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:we_hr/widgets/announcement_header.dart';
+import 'package:we_hr/widgets/announcement_item.dart';
 
 class Announcement extends StatelessWidget {
   const Announcement({super.key});
@@ -19,6 +20,8 @@ class Announcement extends StatelessWidget {
       child: Column(
         children: [
           AnnouncementHeader(),
+          SizedBox(height: 16),
+          AnnouncementItem(),
         ],
       ),
     );

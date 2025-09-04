@@ -4,7 +4,7 @@ import 'package:we_hr/utils/app_colors.dart';
 abstract class AppStyles {
   static TextStyle styleRegular16(context) {
     return TextStyle(
-      color: Color(0xff686868),
+      color: Color(0xff303030),
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w400,
