@@ -23,7 +23,7 @@ class CustomAppbar extends StatelessWidget {
           SizedBox(width: 30),
           CircleAvatar(
             backgroundColor: AppColors.kKohlyColor,
-            radius: 26, // استخدم radius بدل maxRadius
+            radius: 25,
             child: ClipOval(
               child: Image.asset(
                 'assets/images/profile.jpg',
@@ -35,7 +35,7 @@ class CustomAppbar extends StatelessWidget {
           ),
           SizedBox(width: 12),
           Text(
-            'Admirra John',
+            'Muhammed Ahmed',
             style: AppStyles.styleMeduim16(context)
                 .copyWith(color: AppColors.kKohlyColor),
           ),

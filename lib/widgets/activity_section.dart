@@ -10,7 +10,7 @@ class ActivitySection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 72),
+        SizedBox(height: 64),
         RecentlyActivity(),
       ],
     );
