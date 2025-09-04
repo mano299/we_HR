@@ -22,8 +22,16 @@ class CustomAppbar extends StatelessWidget {
           SvgPicture.asset('assets/images/message.svg'),
           SizedBox(width: 30),
           CircleAvatar(
-            backgroundColor: Colors.black,
-            maxRadius: 24,
+            backgroundColor: AppColors.kKohlyColor,
+            radius: 26, // استخدم radius بدل maxRadius
+            child: ClipOval(
+              child: Image.asset(
+                'assets/images/profile.jpg',
+                fit: BoxFit.cover,
+                width: 48,
+                height: 48,
+              ),
+            ),
           ),
           SizedBox(width: 12),
           Text(
