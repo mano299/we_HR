@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:we_hr/views/dashboard_view.dart';
 
 void main() {
-  runApp(const WeHR());
+  runApp(DevicePreview(
+    builder: (context) => WeHR(),
+  ));
 }
 
 class WeHR extends StatelessWidget {
