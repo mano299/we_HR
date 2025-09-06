@@ -11,7 +11,7 @@ class Announcement extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         border: Border.all(
-          color: Color(0xffE0E0E0),
+          color: const Color(0xffE0E0E0),
           width: 1,
         ),
         color: Colors.white,
@@ -19,13 +19,17 @@ class Announcement extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(top: 16, right: 20, left: 20),
-              child: AnnouncementBody(),
+          // هنا خليتها Scrollable
+          SizedBox(
+            height: 200, // 🔥 تحدد الطول اللي محتاجه للـ scroll
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16, right: 20, left: 20),
+                child: AnnouncementBody(),
+              ),
             ),
           ),
-          Divider(color: Color(0xffE0E0E0)),
+          const Divider(color: Color(0xffE0E0E0)),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
             child: Text(

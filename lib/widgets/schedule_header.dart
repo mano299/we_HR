@@ -11,6 +11,7 @@ class ScheduleHeader extends StatelessWidget {
       children: [
         Flexible(
           child: Text(
+            softWrap: true,
             'Upcoming Schedule',
             style: AppStyles.styleMeduim18(context)
                 .copyWith(color: AppColors.kKohlyColor),
