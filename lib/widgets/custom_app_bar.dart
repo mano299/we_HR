@@ -5,9 +5,8 @@ import 'package:we_hr/utils/app_styles.dart';
 import 'package:we_hr/widgets/custom_text_field.dart';
 
 class CustomAppbar extends StatelessWidget {
-  const CustomAppbar({
-    super.key,
-  });
+  const CustomAppbar({super.key, this.isTablet});
+  final bool? isTablet;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +34,7 @@ class CustomAppbar extends StatelessWidget {
           ),
           SizedBox(width: 12),
           Text(
-            'Muhammed Ahmed',
+            (isTablet) != null ? '' : 'Muhammed Ahmed',
             style: AppStyles.styleMeduim16(context)
                 .copyWith(color: AppColors.kKohlyColor),
           ),
