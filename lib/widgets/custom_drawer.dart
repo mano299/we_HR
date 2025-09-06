@@ -10,25 +10,35 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color(0xfffafafa),
-      padding: const EdgeInsets.only(left: 30.0),
+      padding: const EdgeInsets.only(
+          left: 30.0, right: 10), // 👈 أدي مساحة يمين كمان
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.only(top: 10.0),
               child: Center(
-                child: Text(
-                  'WeHR',
-                  style: AppStyles.styleSemiBold36(context),
+                child: FittedBox(
+                  // 👈 يخلي النص يتأقلم
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    'WeHR',
+                    style: AppStyles.styleSemiBold36(context),
+                  ),
                 ),
               ),
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: 39)),
           SliverToBoxAdapter(
-            child: Text(
-              'MAIN MENU',
-              style: AppStyles.styleMeduim12(context),
+            child: FittedBox(
+              // 👈 برضه هنا
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'MAIN MENU',
+                style: AppStyles.styleMeduim12(context),
+              ),
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: 10)),
