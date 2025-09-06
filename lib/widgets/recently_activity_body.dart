@@ -15,42 +15,48 @@ class RecentlyActivityBody extends StatelessWidget {
           style: AppStyles.styleMeduim12(context)
               .copyWith(fontSize: 10, color: Colors.white.withOpacity(0.6)),
         ),
-        SizedBox(height: 6),
+        const SizedBox(height: 6),
         Text(
           'You Posted a New Job',
           style: AppStyles.styleMeduim18(context),
         ),
-        SizedBox(height: 6),
+        const SizedBox(height: 6),
         Text(
           'Kindly check the requirements and terms of work and make sure everything is right.',
           style: AppStyles.styleMeduim16(context)
               .copyWith(color: Colors.white.withOpacity(0.8)),
         ),
-        SizedBox(height: 28),
+        const SizedBox(height: 28),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              'Today you makes 12 Activity',
-              style: AppStyles.styleRegular10(context)
-                  .copyWith(fontSize: 14, color: Colors.white),
+            Flexible(
+              child: Text(
+                'Today you makes 12 Activity',
+                style: AppStyles.styleRegular10(context)
+                    .copyWith(fontSize: 14, color: Colors.white),
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+              ),
             ),
+            const SizedBox(width: 8),
             ElevatedButton(
-              style: ButtonStyle(
-                shape: WidgetStateProperty.all(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(4),
-                  ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.kRedColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4),
                 ),
-                backgroundColor: WidgetStateProperty.all(AppColors.kRedColor),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               ),
               onPressed: () {},
               child: Text(
                 'See All Activity',
                 style: AppStyles.styleMeduim16(context)
                     .copyWith(fontSize: 14, color: Colors.white),
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
               ),
-            )
+            ),
           ],
         )
       ],

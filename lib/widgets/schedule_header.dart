@@ -9,10 +9,12 @@ class ScheduleHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
-          'Upcoming Schedule',
-          style: AppStyles.styleMeduim18(context)
-              .copyWith(color: AppColors.kKohlyColor),
+        Flexible(
+          child: Text(
+            'Upcoming Schedule',
+            style: AppStyles.styleMeduim18(context)
+                .copyWith(color: AppColors.kKohlyColor),
+          ),
         ),
         Spacer(),
         Container(

@@ -7,12 +7,14 @@ class AnnouncementBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        AnnouncementHeader(),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          AnnouncementHeader(),
           SizedBox(height: 16),
-          Expanded(child: AnnouncementItemsListView()),
-      ],
+          AnnouncementItemsListView(),
+        ],
+      ),
     );
   }
 }
