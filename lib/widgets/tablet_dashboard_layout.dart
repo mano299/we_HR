@@ -23,6 +23,7 @@ class TabletDashboardLayout extends StatelessWidget {
             flex: 4,
             child: Column(
               children: [
+                SizedBox(height: 12.5),
                 CustomAppbar(isTablet: true),
                 Expanded(
                   child: SingleChildScrollView(
